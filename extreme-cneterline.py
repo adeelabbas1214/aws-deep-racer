@@ -34,6 +34,6 @@ def reward_function(params):
 
     # Penalize if the car is in reverse
     if is_reversed:
-        reward *= 0.5  # Reduce reward if going in reverse
+        reward *= 0.5  
 
-    return float(reward)
+    return  float(reward)
