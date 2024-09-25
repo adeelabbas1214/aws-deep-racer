@@ -10,7 +10,7 @@ def reward_function(params):
     # Initialize the reward
     reward = 1.0
 
-    # Reward for staying on track
+    # Reward for staying on the track
     if all_wheels_on_track:
         reward += 10.0
     else:
@@ -36,4 +36,4 @@ def reward_function(params):
     if is_reversed:
         reward *= 0.5  
 
-    return  float(reward)
+    return   float(reward)
