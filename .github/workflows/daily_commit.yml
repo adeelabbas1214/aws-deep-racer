@@ -14,8 +14,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Create or update a dummy file
-        run: |
-          echo "Task Done - $(date)" >> dummy.txt
+        run: echo "Task Done - $(date)" >> dummy.txt
 
       - name: Configure Git
         run: |
@@ -27,4 +26,3 @@ jobs:
           git add .
           git commit -m "Task Done"
           git push origin main
- 
