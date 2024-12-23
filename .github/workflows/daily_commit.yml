@@ -3,6 +3,7 @@ name: Dummy Daily Commit
 on:
   schedule:
     - cron: '0 2 * * *'  # Runs daily at 2:00 AM UTC
+  workflow_dispatch:  # Allows manual trigger from GitHub UI
 
 jobs:
   dummy-commit:
@@ -12,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Create a dummy file or update a placeholder
+      - name: Create or update a dummy file
         run: |
           echo "Task Done - $(date)" >> dummy.txt
 
@@ -26,3 +27,4 @@ jobs:
           git add .
           git commit -m "Task Done"
           git push origin main
+ 
